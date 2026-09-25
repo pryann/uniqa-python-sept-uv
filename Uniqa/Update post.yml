@@ -1,0 +1,22 @@
+info:
+  name: Update post
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{host}}/posts/1"
+  body:
+    type: json
+    data: |-
+      {
+        "body": "new text"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

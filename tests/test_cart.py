@@ -1,5 +1,5 @@
 import pytest
-from cart import Cart, CartItem, ItemNotInCartError
+from src.cart import Cart, CartItem, ItemNotInCartError
 
 
 CATALOG: dict[str, tuple[str, int]] = {

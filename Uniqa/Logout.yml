@@ -1,0 +1,26 @@
+info:
+  name: Logout
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: ""
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        const cookie = bru.getVar("cookie");
+
+        if(cookie) {
+          req.setHeader("Cookie", cookie)
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

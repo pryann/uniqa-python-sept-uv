@@ -1,6 +1,6 @@
 import pytest
 
-from shop import gross_price, apply_discount, average_rating
+from src.shop import gross_price, apply_discount, average_rating
 
 
 def test_gross_price_add_default_vat() -> None:

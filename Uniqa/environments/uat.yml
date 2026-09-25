@@ -1,0 +1,5 @@
+name: uat
+variables:
+  - name: host
+    value: https://jsonplaceholder.typicode.com
+    description: ""
